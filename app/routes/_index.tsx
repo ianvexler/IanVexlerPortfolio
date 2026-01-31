@@ -2,7 +2,7 @@ import type { MetaFunction } from "@remix-run/node";
 import { Badge } from "react-bootstrap";
 import { QuickLinks } from "~/components/home/intro";
 import { MyJourney } from "~/components/home/journey";
-import { Projects } from "~/components/home/projects";
+import Projects from "~/components/home/Projects";
 
 export const meta: MetaFunction = () => {
   return [
