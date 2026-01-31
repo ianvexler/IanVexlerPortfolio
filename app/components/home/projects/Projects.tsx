@@ -29,7 +29,7 @@ const Projects = () => {
                 <ProjectCard 
                   title={project.title}
                   description={project.description}
-                  image={project.images[0]}
+                  image={project.cardImage}
                   tags={project.tags}
                   link={project.link}
                   github={project.github}

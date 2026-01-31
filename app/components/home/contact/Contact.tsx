@@ -14,7 +14,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // TODO: Connect to email service (Formspree, Netlify Forms, etc.)
-    const mailtoLink = `mailto:ianvexler@gmail.com?subject=Contact from ${formData.name}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${formData.email}`;
+    const mailtoLink = `mailto:ianvexler@gmail.com?subject=${encodeURIComponent(`Contact from ${formData.name}`)}&body=${encodeURIComponent(`${formData.message}\n\nFrom: ${formData.email}`)}`;
     window.location.href = mailtoLink;
   };
 

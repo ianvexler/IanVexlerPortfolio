@@ -3,6 +3,7 @@ import { Badge } from "react-bootstrap";
 import { Contact } from "~/components/home/contact";
 import { QuickLinks } from "~/components/home/intro";
 import { MyJourney } from "~/components/home/journey";
+import meImage from "~/assets/images/me.jpg";
 import { Projects } from "../components/home/projects";
 
 export const meta: MetaFunction = () => {
@@ -39,7 +40,7 @@ export default function Index() {
         <div className="d-flex justify-content-center mt-4">
           <div className="skills-list d-flex flex-wrap justify-content-center gap-2">
             {skills.map((skill) => (
-              <Badge key={skill} className="skill-tag px-3 py-2">
+              <Badge key={skill} className="project-tag px-2 py-1 fw-normal rounded-1">
                 {skill}
               </Badge>
             ))}
@@ -53,21 +54,22 @@ export default function Index() {
                 <div className="about-card p-4 p-md-5 rounded-4">
                   <div className="row align-items-center">
                     <div className="col-md-4 mb-4 mb-md-0 text-center">
-                      {/* TODO: Add image */}
-                      <p>Placeholder</p>
+                      <img 
+                        src={meImage} 
+                        alt="Ian Vexler" 
+                        className="about-image rounded-4"
+                        style={{ maxWidth: '200px', width: '100%' }}
+                      />
                     </div>
                     <div className="col-md-8">
                       <h2 className="about-title mb-4">
                         About Me
                       </h2>
                       <p className="about-text mb-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                        exercitation ullamco laboris.
+                        I'm a software engineer with a background in building bespoke solutions across healthcare, education, and industrial technology. I enjoy working end-to-end on products, from understanding real user requirements to designing and developing systems tailored for their needs. My day-to-day work includes full-stack development in close collaboration with clients and cross-functional teams.
                       </p>
                       <p className="about-text mb-0">
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                        Alongside industry experience, I have a strong academic interest in data-driven systems and machine learning. During my degree, I focused on applying predictive models and optimisation techniques to real problems, particularly in the context of sports analytics.
                       </p>
                     </div>
                   </div>
