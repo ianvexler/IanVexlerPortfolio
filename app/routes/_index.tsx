@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Badge } from "react-bootstrap";
+import { Contact } from "~/components/home/contact";
 import { QuickLinks } from "~/components/home/intro";
 import { MyJourney } from "~/components/home/journey";
 import Projects from "~/components/home/Projects";
@@ -80,6 +81,8 @@ export default function Index() {
       <MyJourney />
 
       <Projects />
+
+      <Contact />
     </div>
   );
 }
