@@ -1,36 +1,41 @@
-# Welcome to Remix + Vite!
+# Ian Vexler — Portfolio
 
-📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/guides/vite) for details on supported features.
+Personal portfolio website showcasing my work as a Software Engineer.
+
+**Live:** [ianvexler.com](https://ianvexler.com)
+
+---
+
+## Hey!
+
+I'm Ian, a Full-Stack Software Engineer based in the UK.
+
+I graduated from the University of Sheffield with a 1st Class Honours in Software Engineering, and I'm currently working at The Curve Consulting delivering bespoke software solutions for clients across various sectors.
+
+When I'm not coding, you might find me exploring machine learning projects, playing music, or diving into sports analytics.
+
+Feel free to explore the site and get in touch!
+
+---
+
+## Connect
+
+- [LinkedIn](https://www.linkedin.com/in/ian-vexler-73b9291b5/)
+- [ianvexler@gmail.com](mailto:ianvexler@gmail.com)
+
+---
 
 ## Development
 
-Run the Vite dev server:
+Built with [Remix](https://remix.run/), SCSS, and Bootstrap 5.
 
-```shellscript
+```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-```
 
-## Deployment
-
-First, build your app for production:
-
-```sh
+# Build for production
 npm run build
 ```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
