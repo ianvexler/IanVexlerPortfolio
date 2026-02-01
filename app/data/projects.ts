@@ -102,7 +102,7 @@ export const otherProjects: ProjectData[] = [
   },
   {
     title: "WOOT",
-    description: "Award-winning real-time quiz platform inspired by Kahoot, built for educational environments. Teachers create and manage quizzes while students join live sessions instantly using a game code, creating a smooth live experience for students.",
+    description: "Developed a real-time quiz platform inspired by Kahoot, built for educational use. Teachers create and manage quizzes while students join live sessions instantly using a game code, creating a smooth live experience for students.",
     highlights: [
       "Implemented real-time synchronisation using Server-Sent Events (SSE)",
       "Built quiz creation, folder organisation, and live session management features",
@@ -111,21 +111,21 @@ export const otherProjects: ProjectData[] = [
     ],
     cardImage: wootBanner,
     images: [woot1, woot2, woot3, woot5, woot6, woot9],
-    tags: ["Ruby on Rails", "SSE", "PostgreSQL", "Award-Winning", "UOS"],
+    tags: ["Ruby on Rails", "SSE", "PostgreSQL", "Award-Winning", "University of Sheffield"],
     github: "https://github.com/ianvexler/WOOT",
   },
-  {
-    title: "Technolog Cello XT Configuration App",
-    description: "Contributed to a cross-platform mobile application used by field engineers to configure IoT water and gas monitoring devices in offline, industrial environments. The app enabled device setup and interaction via Bluetooth through packet communication.",
-    highlights: [
-      "Developed core features and initial architecture of a React Native application",
-      "Translated extensive custom packet and protocol documentation into robust Bluetooth communication logic",
-      "Implemented end-to-end device setup and sensor configuration workflows",
-      "Migrated core functionality from a legacy mobile application to a modern cross-platform solution",
-      "Designed and refined UX for technical users operating in industrial environments"
-    ],
-    cardImage: technologBanner,
-    images: [technolog1, technolog2, technolog3],
-    tags: ["React Native", "Expo", "Bluetooth", "IoT", "Offline-First"],
-  }
+  // {
+  //   title: "Technolog Cello XT Configuration App",
+  //   description: "Contributed to a cross-platform mobile application used by field engineers to configure IoT water and gas monitoring devices in offline, industrial environments. The app enabled device setup and interaction via Bluetooth through packet communication.",
+  //   highlights: [
+  //     "Developed core features and initial architecture of a React Native application",
+  //     "Translated extensive custom packet and protocol documentation into robust Bluetooth communication logic",
+  //     "Implemented end-to-end device setup and sensor configuration workflows",
+  //     "Migrated core functionality from a legacy mobile application to a modern cross-platform solution",
+  //     "Designed and refined UX for technical users operating in industrial environments"
+  //   ],
+  //   cardImage: technologBanner,
+  //   images: [technolog1, technolog2, technolog3],
+  //   tags: ["React Native", "Expo", "Bluetooth", "IoT", "Offline-First"],
+  // }
 ];

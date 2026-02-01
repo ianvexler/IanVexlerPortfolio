@@ -71,7 +71,7 @@ export default function Index() {
                         About Me
                       </h2>
                       <p className="about-text mb-4">
-                        I'm a software engineer with a background in building bespoke solutions across healthcare, education and industrial technology. I enjoy working end-to-end on products, from understanding real user requirements to designing and developing systems tailored for their needs. My day-to-day work includes full-stack development in close collaboration with clients and cross-functional teams.
+                        I'm a software engineer with a background in building bespoke solutions of across healthcare, education and industrial sectors. I enjoy working end-to-end on products, from understanding real user requirements to designing and developing systems tailored for their needs. My day-to-day work includes full-stack development in close collaboration with clients and cross-functional teams.
                       </p>
                       <p className="about-text mb-0">
                         Alongside industry experience, I have a strong academic interest in data-driven systems and machine learning. During my degree, I focused on applying predictive models and optimisation techniques to real problems, particularly in the context of sports analytics.
