@@ -19,6 +19,7 @@ import technolog1 from "~/assets/images/technolog/technolog1.jpg";
 import technolog2 from "~/assets/images/technolog/technolog2.jpg";
 import technolog3 from "~/assets/images/technolog/technolog3.jpg";
 
+import automatedFPLBanner from "~/assets/images/automatedFPL/fplBanner.jpg";
 import automatedFPL1 from "~/assets/images/automatedFPL/image.png";
 import automatedFPL2 from "~/assets/images/automatedFPL/image(1).png";
 import automatedFPL4 from "~/assets/images/automatedFPL/Pasted Graphic 5.png";
@@ -43,6 +44,23 @@ export interface ProjectData {
 }
 
 export const featuredProjects: ProjectData[] = [
+  // {
+  //   title: "Automated Fantasy Premier League",
+  //   description: "Built an machine learning system to predict Fantasy Premier League player performance and automate squad optimisation. The project combined time-series modelling, feature engineering and optimisation techniques to support data-driven decision making under uncertainty.",
+  //   highlights: [
+  //     "Designed and evaluated predictive models using historical football data, benchmarked against baseline and official FPL metrics",
+  //     "Developed multi-stream LSTM models using player, team and match time-series data",
+  //     "Integrated the FPL API and scraped FBref to leverage on extensive and detailed datasets",
+  //     "Explored optimisation approaches including genetic algorithms and season-long simulation strategies inspired by top FPL managerial trends",
+  //     "Currently developing a web interface to allow users to interact with the model and optimise their squads on demand"
+  //   ],
+  //   images: [automatedFPL1, automatedFPL2, automatedFPL4],
+  //   tags: ["Python", "TensorFlow", "LSTM", "Sports Analytics", "Optimisation"],
+  //   github: "https://github.com/ianvexler/AutomatedFPLPlayer"
+  // }
+];
+
+export const otherProjects: ProjectData[] = [
   {
     title: "Automated Fantasy Premier League",
     description: "Built an machine learning system to predict Fantasy Premier League player performance and automate squad optimisation. The project combined time-series modelling, feature engineering and optimisation techniques to support data-driven decision making under uncertainty.",
@@ -53,26 +71,10 @@ export const featuredProjects: ProjectData[] = [
       "Explored optimisation approaches including genetic algorithms and season-long simulation strategies inspired by top FPL managerial trends",
       "Currently developing a web interface to allow users to interact with the model and optimise their squads on demand"
     ],
+    cardImage: automatedFPLBanner,
     images: [automatedFPL1, automatedFPL2, automatedFPL4],
     tags: ["Python", "TensorFlow", "LSTM", "Sports Analytics", "Optimisation"],
     github: "https://github.com/ianvexler/AutomatedFPLPlayer"
-  }
-];
-
-export const otherProjects: ProjectData[] = [
-  {
-    title: "Study Seed",
-    description: "Developed a functional prototype and product concept for an AI-powered study planning application as part of a Google AI developer competition. The project explored the use of generative AI to deliver personalised study plans by transforming sample questions and lecture contents into study materials. Institutions would supply their own material, which the application would leverage to generate personalised learning resources for each student.",
-    highlights: [
-      "Designed the overall product concept and user experience flows",
-      "Built a working demo to showcase core interactions and AI-driven features",
-      "Created interface designs to showcase system behaviour and use cases",
-      "Explored the use of generative AI for personalised study support",
-      "Presented the project as part of a competitive developer submission"
-    ],
-    cardImage: studySeedBanner,
-    images: [studySeedVideo, studySeed1, studySeed2, studySeed3],
-    tags: ["Gemini AI", "Full-Stack", "React", "Hackathon", "Ruby on Rails"],
   },
   {
     title: "Swaya App",
@@ -88,18 +90,32 @@ export const otherProjects: ProjectData[] = [
     tags: ["React Native", "Ruby on Rails", "Full-Stack", "Expo", "Cross-Platform", "Student Engagement"],
   },
   {
-    title: "Texmo Industries Application Hub",
-    description: "Participated in the development of an internal enterprise application suite for a multinational manufacturing group, supporting workflow management, task coordination and organisational processes. The project focused on replacing thrird-party software, offering a centralised and personalised solution for the organisation.",
+    title: "Study Seed",
+    description: "Developed a functional prototype and product concept for an AI-powered study planning application as part of a Google AI developer competition. The project explored the use of generative AI to deliver personalised study plans by transforming sample questions and lecture contents into study materials. Institutions would supply their own material, which the application would leverage to generate personalised learning resources for each student.",
     highlights: [
-      "Contributed across the full delivery cycle, from requirements gathering to deployment",
-      "Developed and maintained features across a multi-application enterprise system",
-      "Worked under strict deadlines to replace expiring third-party systems before subscription end dates",
-      "Designed and implemented a reusable front-end component library shared across applications",
+      "Designed the overall product concept and user experience flows",
+      "Built a working demo to showcase core interactions and AI-driven features",
+      "Created interface designs to showcase system behaviour and use cases",
+      "Explored the use of generative AI for personalised study support",
+      "Presented the project as part of a competitive developer submission"
     ],
-    cardImage: texmoBanner,
-    images: [texmo1, texmo2, texmo3],
-    tags: ["React", "ASP.NET", "C#", "Enterprise", "Bespoke Software"],
+    cardImage: studySeedBanner,
+    images: [studySeedVideo, studySeed1, studySeed2, studySeed3],
+    tags: ["Gemini AI", "Full-Stack", "React", "Hackathon", "Ruby on Rails"],
   },
+  // {
+  //   title: "Texmo Industries Application Hub",
+  //   description: "Participated in the development of an internal enterprise application suite for a multinational manufacturing group, supporting workflow management, task coordination and organisational processes. The project focused on replacing thrird-party software, offering a centralised and personalised solution for the organisation.",
+  //   highlights: [
+  //     "Contributed across the full delivery cycle, from requirements gathering to deployment",
+  //     "Developed and maintained features across a multi-application enterprise system",
+  //     "Worked under strict deadlines to replace expiring third-party systems before subscription end dates",
+  //     "Designed and implemented a reusable front-end component library shared across applications",
+  //   ],
+  //   cardImage: texmoBanner,
+  //   images: [texmo1, texmo2, texmo3],
+  //   tags: ["React", "ASP.NET", "C#", "Enterprise", "Bespoke Software"],
+  // },
   {
     title: "WOOT",
     description: "Developed a real-time quiz platform inspired by Kahoot, built for educational use. Teachers create and manage quizzes while students join live sessions instantly using a game code, creating a smooth live experience for students.",
