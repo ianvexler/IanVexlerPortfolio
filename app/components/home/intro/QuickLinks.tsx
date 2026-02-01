@@ -1,3 +1,5 @@
+import cvFile from "~/assets/files/Ian Vexler Galarza - CV.pdf";
+
 const QuickLinks = () => {
   const links = [
     {
@@ -20,8 +22,8 @@ const QuickLinks = () => {
     },
     {
       icon: "bi-file-earmark-text",
-      label: "Resume",
-      href: "/resume.pdf",
+      label: "CV",
+      href: cvFile,
       external: true,
     },
   ];

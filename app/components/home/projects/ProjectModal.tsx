@@ -8,6 +8,10 @@ interface ProjectModalProps {
   onHide: () => void;
 }
 
+const isVideo = (src: string) => {
+  return src.match(/\.(mp4|webm|ogg)$/i) !== null;
+};
+
 const ProjectModal = ({ project, show, onHide }: ProjectModalProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -15,7 +19,7 @@ const ProjectModal = ({ project, show, onHide }: ProjectModalProps) => {
     return null;
   }
 
-  const hasImages = project.images.length > 0;
+  const hasMedia = project.images.length > 0;
 
   const handlePrev = () => {
     setActiveIndex((prev) => (prev === 0 ? project.images.length - 1 : prev - 1));
@@ -24,6 +28,8 @@ const ProjectModal = ({ project, show, onHide }: ProjectModalProps) => {
   const handleNext = () => {
     setActiveIndex((prev) => (prev === project.images.length - 1 ? 0 : prev + 1));
   };
+
+  const currentMedia = project.images[activeIndex];
 
   return (
     <Modal 
@@ -39,16 +45,25 @@ const ProjectModal = ({ project, show, onHide }: ProjectModalProps) => {
       
       <Modal.Body className="px-4 pb-4 pt-2">
         <div className="row g-4">
-          {hasImages && (
+          {hasMedia && (
             <div className="col-lg-5">
               <div className="modal-carousel rounded-3 overflow-hidden">
                 <div className="carousel-main rounded-3 overflow-hidden">
-                  {project.images[activeIndex] ? (
-                    <img 
-                      src={project.images[activeIndex]} 
-                      alt={`${project.title} screenshot ${activeIndex + 1}`} 
-                      className="w-100 h-100 object-fit-cover d-block" 
-                    />
+                  {currentMedia ? (
+                    isVideo(currentMedia) ? (
+                      <video 
+                        src={currentMedia}
+                        controls
+                        className="w-100 h-100 object-fit-contain d-block"
+                        style={{ backgroundColor: '#000' }}
+                      />
+                    ) : (
+                      <img 
+                        src={currentMedia} 
+                        alt={`${project.title} screenshot ${activeIndex + 1}`} 
+                        className="w-100 h-100 object-fit-contain d-block" 
+                      />
+                    )
                   ) : (
                     <div className="carousel-placeholder w-100 h-100 d-flex align-items-center justify-content-center">
                       <i className="bi bi-image text-white-50 fs-1" />
@@ -80,7 +95,7 @@ const ProjectModal = ({ project, show, onHide }: ProjectModalProps) => {
             </div>
           )}
 
-          <div className={hasImages ? "col-lg-7" : "col-12"}>
+          <div className={hasMedia ? "col-lg-7" : "col-12"}>
             <p className="text-white-75 mb-4" style={{ lineHeight: 1.8 }}>
               {project.description}
             </p>

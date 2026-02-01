@@ -1,22 +1,7 @@
-import { useState } from "react";
+import { useForm, ValidationError } from '@formspree/react';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: ""
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // TODO: Connect to email service (Formspree, Netlify Forms, etc.)
-    const mailtoLink = `mailto:ianvexler@gmail.com?subject=Contact from ${formData.name}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${formData.email}`;
-    window.location.href = mailtoLink;
-  };
+  const [state, handleSubmit] = useForm("mqebrnro");
 
   return (
     <section id="contact" className="contact-section py-5">
@@ -39,45 +24,74 @@ const Contact = () => {
               </div>
 
               <div className="col-lg-6 offset-lg-1">
-                <form onSubmit={handleSubmit} className="contact-form">
-                  <div className="mb-3">
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Your Name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="form-control contact-input"
-                      required
-                    />
+                {state.succeeded ? (
+                  <div className="success-message text-center py-5">
+                    <i className="bi bi-check-circle fs-1 text-success mb-3 d-block" />
+                    <h4 className="mb-2">Message Sent!</h4>
+                    <p className="text-white-50 mb-0">Thanks for reaching out. I'll get back to you soon.</p>
                   </div>
-                  <div className="mb-3">
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Your Email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="form-control contact-input"
-                      required
-                    />
-                  </div>
-                  <div className="mb-4">
-                    <textarea
-                      name="message"
-                      placeholder="Your Message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      className="form-control contact-input contact-textarea"
-                      rows={5}
-                      required
-                    />
-                  </div>
-                  <button type="submit" className="btn-contact d-inline-flex align-items-center gap-2 px-4 py-3 rounded-pill fw-medium">
-                    <i className="bi bi-send" />
-                    Send Message
-                  </button>
-                </form>
+                ) : (
+                  <form onSubmit={handleSubmit} className="contact-form">
+                    <div className="mb-3">
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your Name"
+                        className="form-control contact-input"
+                        required
+                      />
+                      <ValidationError 
+                        prefix="Name" 
+                        field="name"
+                        errors={state.errors}
+                        className="text-danger mt-1 small"
+                      />
+                    </div>
+                    <div className="mb-3">
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Your Email"
+                        className="form-control contact-input"
+                        required
+                      />
+                      <ValidationError 
+                        prefix="Email" 
+                        field="email"
+                        errors={state.errors}
+                        className="text-danger mt-1 small"
+                      />
+                    </div>
+                    <div className="mb-4">
+                      <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Your Message"
+                        className="form-control contact-input contact-textarea"
+                        rows={5}
+                        required
+                      />
+                      <ValidationError 
+                        prefix="Message" 
+                        field="message"
+                        errors={state.errors}
+                        className="text-danger mt-1 small"
+                      />
+                    </div>
+                    <div className="d-flex justify-content-end">
+                      <button
+                        type="submit" 
+                        disabled={state.submitting}
+                        className="btn-contact d-inline-flex align-items-center gap-2 px-4 py-3 rounded-pill fw-medium"
+                      >
+                        <i className={`bi ${state.submitting ? 'bi-hourglass-split' : 'bi-send'}`} />
+                        {state.submitting ? 'Sending...' : 'Send Message'}
+                      </button>
+                    </div>
+                  </form>
+                )}
               </div>
             </div>
           </div>

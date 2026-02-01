@@ -22,7 +22,7 @@ const MainNavbar = () => {
           <NavbarItem text="Journey" route="#my-journey" />
           <NavbarItem text="Projects" route="#projects" />
           <a href="mailto:contact@example.com" className="navbar-cta ms-2 ms-sm-3 px-3 py-2 rounded-pill text-decoration-none fw-medium">
-            Let's Talk
+            Get in touch
           </a>
         </nav>
       </Container>
