@@ -38,15 +38,16 @@ export interface ProjectData {
 export const featuredProjects: ProjectData[] = [
   {
     title: "Automated Fantasy Premier League",
-    description: "Built an end-to-end machine learning system to predict Fantasy Premier League player performance and automate squad optimisation. The project combined time-series modelling, feature engineering, and optimisation techniques to support data-driven decision making under uncertainty.",
+    description: "Built an machine learning system to predict Fantasy Premier League player performance and automate squad optimisation. The project combined time-series modelling, feature engineering and optimisation techniques to support data-driven decision making under uncertainty.",
     highlights: [
       "Designed and evaluated predictive models using historical football data, benchmarked against baseline and official FPL metrics",
-      "Developed multi-stream LSTM models using player-level and match-level time-series data",
-      "Integrated the FPL API and scraped FBref to construct predictive feature sets",
-      "Explored optimisation approaches including genetic algorithms and season-long simulation strategies",
+      "Developed multi-stream LSTM models using player, team and match time-series data",
+      "Integrated the FPL API and scraped FBref to leverage on extensive and detailed datasets",
+      "Explored optimisation approaches including genetic algorithms and season-long simulation strategies inspired by top FPL managerial trends",
+      "Currently developing a web interface to allow users to interact with the model and optimise their squads on demand"
     ],
     images: [automatedFPL1, automatedFPL2, automatedFPL3, automatedFPL4],
-    tags: ["Machine Learning", "LSTM", "Optimisation", "Sports Analytics", "Python", "TensorFlow", "Data Engineering"],
+    tags: ["Python", "TensorFlow", "LSTM", "Sports Analytics", "Optimisation"],
     github: "https://github.com/ianvexler/AutomatedFPLPlayer"
   }
 ];
@@ -54,7 +55,7 @@ export const featuredProjects: ProjectData[] = [
 export const otherProjects: ProjectData[] = [
   {
     title: "Study Seed",
-    description: "Developed a functional prototype and product concept for an AI-powered study planning application as part of a Google AI developer competition. The project explored the use of generative AI to deliver personalised study guidance by transforming students’ own notes and lecture content into tailored, on-demand study materials. Institutions would supply curated databases of notes and lectures, which the application would leverage to generate personalised learning resources for each student.",
+    description: "Developed a functional prototype and product concept for an AI-powered study planning application as part of a Google AI developer competition. The project explored the use of generative AI to deliver personalised study plans by transforming sample questions and lecture contents into study materials. Institutions would supply their own material, which the application would leverage to generate personalised learning resources for each student.",
     highlights: [
       "Designed the overall product concept and user experience flows",
       "Built a working demo to showcase core interactions and AI-driven features",
@@ -64,48 +65,46 @@ export const otherProjects: ProjectData[] = [
     ],
     cardImage: studySeedBanner,
     images: [studySeedVideo, studySeed1, studySeed2, studySeed3],
-    tags: ["Generative AI", "Google AI", "UX Design", "Prototyping"],
+    tags: ["Gemini AI", "Full-Stack", "React", "Hackathon", "Ruby on Rails"],
   },
   {
     title: "Swaya App",
-    description: "Acted as the primary developer on a cross-platform mobile application for a multi-academy trust, used by thousands of students across multiple colleges. The project focused on allowing students to complete surveys and feedback forms, and for teachers to view the results to improve the student experience.",
+    description: "Contributed significantly to the implementation of a cross-platform mobile application for a multi-academy trust, used by thousands of students across multiple colleges. The project focused on allowing students to complete surveys and feedback forms, allowing teachers to view the results to improve the student experience.",
     highlights: [
       "Developed most of the mobile application and contributed to backend services",
       "Built and shipped a cross-platform client alongside supporting APIs",
-      "Implemented real-time surveys, feedback tools, and engagement features",
-      "Collaborated closely with designers and stakeholders during requirement capture",
-      "Deployed to iOS and Android, improving the student experience across colleges"
+      "Implemented real-time surveys, feedback tools and engagement features",
+      "Collaborated closely with designers and stakeholders to deliver the best possible user experience",
     ],
     cardImage: swayaBanner,
     images: [swaya1, swaya2, swaya3],
-    tags: ["React Native", "Ruby on Rails", "Student Engagement", "Mobile", "Expo"],
+    tags: ["React Native", "Ruby on Rails", "Full-Stack", "Expo", "Cross-Platform", "Student Engagement"],
   },
   {
     title: "Texmo Industries Application Hub",
-    description: "Contributed to the development of an internal enterprise application suite for a multinational manufacturing group, supporting workflow management, task coordination, and organisational processes across multiple teams. The project focused on providing a centralised platform for managing and tracking tasks, projects, and other organisational processes replacing thrird-party software.",
+    description: "Participated in the development of an internal enterprise application suite for a multinational manufacturing group, supporting workflow management, task coordination and organisational processes. The project focused on replacing thrird-party software, offering a centralised and personalised solution for the organisation.",
     highlights: [
-      "Worked on a multi-application system including workflow, task, and organisational tools",
       "Contributed across the full delivery cycle, from requirements gathering to deployment",
-      "Built reusable front-end components to standardise UI patterns across applications",
-      "Collaborated with stakeholders to translate operational needs into technical solutions",
-      "Developed experience in scalable system design and enterprise product delivery"
+      "Developed and maintained features across a multi-application enterprise system",
+      "Worked under strict deadlines to replace expiring third-party systems before subscription end dates",
+      "Designed and implemented a reusable front-end component library shared across applications",
     ],
     cardImage: texmoBanner,
     images: [texmo1, texmo2, texmo3],
-    tags: ["React", ".NET", "C#", "Workflow", "Full-Stack"],
+    tags: ["React", "ASP.NET", "C#", "Enterprise", "Bespoke Software"],
   },
   {
-    title: "Technolog",
-    description: "Contributed to a cross-platform mobile application used by field engineers to configure IoT water and gas monitoring devices in offline, industrial environments. The app enabled on-site device setup and interaction via Bluetooth.",
+    title: "Technolog Cello XT Configuration App",
+    description: "Contributed to a cross-platform mobile application used by field engineers to configure IoT water and gas monitoring devices in offline, industrial environments. The app enabled device setup and interaction via Bluetooth through packet communication.",
     highlights: [
-      "Developed core features in a React Native codebase",
+      "Developed core features and initial architecture of a React Native application",
+      "Translated extensive custom packet and protocol documentation into robust Bluetooth communication logic",
       "Implemented end-to-end device setup and sensor configuration workflows",
-      "Built and tested Bluetooth communication layers for reliable on-site interaction",
-      "Designed and refined UX for field-based technical users",
-      "Worked closely with real-world hardware constraints in an industrial system"
-    ],    
+      "Migrated core functionality from a legacy mobile application to a modern cross-platform solution",
+      "Designed and refined UX for technical users operating in industrial environments"
+    ],
     cardImage: technologBanner,
     images: [technolog1, technolog2, technolog3],
-    tags: ["React Native", "IoT", "Bluetooth", "Mobile", "Expo"],
+    tags: ["React Native", "Expo", "Bluetooth", "IoT", "Offline-First"],
   }
 ];

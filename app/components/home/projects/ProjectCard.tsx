@@ -38,7 +38,7 @@ const ProjectCard = ({
 
         {tags.length > 0 && (
           <div className="d-flex flex-wrap gap-1 mb-3">
-            {tags.slice(0, 4).map((tag) => (
+            {tags.map((tag) => (
               <Badge key={tag} className="project-tag px-2 py-1 fw-normal rounded-1">
                 {tag}
               </Badge>

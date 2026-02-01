@@ -33,7 +33,7 @@ const MyJourney = () => {
                 >
                   <p className="text-white-50 mb-0">
                     Returned to the company in a permanent role after a successful internship. 
-                    Currently working on software projects across healthcare, education, and industrial 
+                    Currently working on software projects across healthcare, education and industrial 
                     technology sectors, collaborating closely with teams and clients to deliver quality solutions.
                   </p>
                 </ExperienceCard>
