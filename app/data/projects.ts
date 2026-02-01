@@ -21,8 +21,15 @@ import technolog3 from "~/assets/images/technolog/technolog3.jpg";
 
 import automatedFPL1 from "~/assets/images/automatedFPL/image.png";
 import automatedFPL2 from "~/assets/images/automatedFPL/image(1).png";
-import automatedFPL3 from "~/assets/images/automatedFPL/image(2).png";
-import automatedFPL4 from "~/assets/images/automatedFPL/image(3).png";
+import automatedFPL4 from "~/assets/images/automatedFPL/Pasted Graphic 5.png";
+
+import wootBanner from "~/assets/images/woot/WootBanner.jpg";
+import woot1 from "~/assets/images/woot/Join at woot.com.png";
+import woot2 from "~/assets/images/woot/Main's Quizzes E.png";
+import woot3 from "~/assets/images/woot/2. Which one is not part of the Deathly Hallows.png";
+import woot5 from "~/assets/images/woot/Quiz Session Code.png";
+import woot6 from "~/assets/images/woot/Welcome to WOOT, Main Academic! ©.png";
+import woot9 from "~/assets/images/woot/Pasted Graphic 14.png";
 
 export interface ProjectData {
   title: string;
@@ -46,7 +53,7 @@ export const featuredProjects: ProjectData[] = [
       "Explored optimisation approaches including genetic algorithms and season-long simulation strategies inspired by top FPL managerial trends",
       "Currently developing a web interface to allow users to interact with the model and optimise their squads on demand"
     ],
-    images: [automatedFPL1, automatedFPL2, automatedFPL3, automatedFPL4],
+    images: [automatedFPL1, automatedFPL2, automatedFPL4],
     tags: ["Python", "TensorFlow", "LSTM", "Sports Analytics", "Optimisation"],
     github: "https://github.com/ianvexler/AutomatedFPLPlayer"
   }
@@ -92,6 +99,20 @@ export const otherProjects: ProjectData[] = [
     cardImage: texmoBanner,
     images: [texmo1, texmo2, texmo3],
     tags: ["React", "ASP.NET", "C#", "Enterprise", "Bespoke Software"],
+  },
+  {
+    title: "WOOT",
+    description: "Award-winning real-time quiz platform inspired by Kahoot, built for educational environments. Teachers create and manage quizzes while students join live sessions instantly using a game code, creating a smooth live experience for students.",
+    highlights: [
+      "Implemented real-time synchronisation using Server-Sent Events (SSE)",
+      "Built quiz creation, folder organisation, and live session management features",
+      "Designed a frictionless student experience with code-based joining and no sign-up required",
+      "Recognised with the Software Hut Prize for outstanding real-world software development"
+    ],
+    cardImage: wootBanner,
+    images: [woot1, woot2, woot3, woot5, woot6, woot9],
+    tags: ["Ruby on Rails", "SSE", "PostgreSQL", "Award-Winning", "UOS"],
+    github: "https://github.com/ianvexler/WOOT",
   },
   {
     title: "Technolog Cello XT Configuration App",

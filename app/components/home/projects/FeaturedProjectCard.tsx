@@ -86,7 +86,7 @@ const FeaturedProjectCard = ({
               {github && (
                 <a href={github} target="_blank" rel="noopener noreferrer" className="project-link d-inline-flex align-items-center px-3 py-2 rounded-2 text-decoration-none">
                   <i className="bi bi-github me-2" />
-                  Source Code
+                  GitHub
                 </a>
               )}
             </div>

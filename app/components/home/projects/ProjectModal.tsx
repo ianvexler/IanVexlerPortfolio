@@ -133,7 +133,7 @@ const ProjectModal = ({ project, show, onHide }: ProjectModalProps) => {
               {project.github && (
                 <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link d-inline-flex align-items-center px-3 py-2 rounded-2 text-decoration-none">
                   <i className="bi bi-github me-2" />
-                  Source Code
+                  GitHub
                 </a>
               )}
             </div>
