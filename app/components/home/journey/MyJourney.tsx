@@ -106,28 +106,28 @@ const MyJourney = () => {
           <div className="hidden md:block flex-1 lg:max-w-[48%] min-h-[700px]">
             <div className="chaos-collage">
               <div className="chaos-photo chaos-1">
-                <img src={img1} alt="Journey photo" className="chaos-img" />
+                <img src={img1} className="chaos-img" alt="Journey" />
               </div>
               <div className="chaos-photo chaos-2">
-                <img src={img2} alt="Journey photo" className="chaos-img" />
+                <img src={img2} className="chaos-img" alt="Journey" />
               </div>
               <div className="chaos-photo chaos-3">
-                <img src={img3} alt="Journey photo" className="chaos-img" />
+                <img src={img3} className="chaos-img" alt="Journey" />
               </div>
               <div className="chaos-photo chaos-4">
-                <img src={img4} alt="Journey photo" className="chaos-img" />
+                <img src={img4} className="chaos-img" alt="Journey" />
               </div>
               <div className="chaos-photo chaos-5">
-                <img src={img5} alt="Journey photo" className="chaos-img" />
+                <img src={img5} className="chaos-img" alt="Journey" />
               </div>
               <div className="chaos-photo chaos-6">
-                <img src={img6} alt="Journey photo" className="chaos-img" />
+                <img src={img6} className="chaos-img" alt="Journey" />
               </div>
               <div className="chaos-photo chaos-7">
-                <img src={img7} alt="Journey photo" className="chaos-img" />
+                <img src={img7} className="chaos-img" alt="Journey" />
               </div>
               <div className="chaos-photo chaos-8">
-                <img src={img8} alt="Journey photo" className="chaos-img" />
+                <img src={img8} className="chaos-img" alt="Journey" />
               </div>
             </div>
           </div>

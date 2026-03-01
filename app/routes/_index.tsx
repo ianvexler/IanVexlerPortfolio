@@ -20,9 +20,11 @@ export default function Index() {
     "C#",
     "TypeScript",
     "React",
+    "Next.js",
     "React Native",
     "ASP.NET",
     "Ruby on Rails",
+    "Node.js",
     "REST APIs",
     "PostgreSQL",
     "MySQL",
@@ -34,7 +36,7 @@ export default function Index() {
     "Agile Development",
     "GitHub",
     "Cross-Platform",
-    "Ubuntu",
+    "Ubuntu"
   ];
 
   return (

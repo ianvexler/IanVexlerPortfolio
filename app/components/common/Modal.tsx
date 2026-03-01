@@ -12,22 +12,33 @@ const Modal = ({ show, onHide, title, children }: ModalProps) => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") onHide();
     };
+
     if (show) {
       document.addEventListener("keydown", handleEscape);
       document.body.style.overflow = "hidden";
     }
+
     return () => {
       document.removeEventListener("keydown", handleEscape);
       document.body.style.overflow = "";
     };
   }, [show, onHide]);
 
-  if (!show) return null;
+  if (!show) {
+    return null;
+  }
 
   return (
     <div
-      className="fixed inset-0 z-[1050] flex items-center justify-center p-4"
+      className="fixed inset-0 z-1050 flex items-center justify-center p-4"
       onClick={onHide}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          onHide();
+        }
+      }}
     >
       <div
         className="absolute inset-0 bg-black/70 backdrop-blur-sm"
@@ -36,9 +47,16 @@ const Modal = ({ show, onHide, title, children }: ModalProps) => {
       <div
         className="relative z-10 w-full max-w-6xl max-h-[95vh] overflow-auto rounded-xl bg-surface border border-border text-text shadow-2xl shadow-black/50"
         onClick={(e) => e.stopPropagation()}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.stopPropagation();
+          }
+        }}
       >
         <div className="flex items-center justify-between border-b border-border px-6 py-4">
-          <h2 className="text-xl font-serif text-text">{title}</h2>
+          <h2 className="text-2xl font-medium font-sans text-text">{title}</h2>
           <button
             type="button"
             onClick={onHide}

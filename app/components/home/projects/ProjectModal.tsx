@@ -48,7 +48,7 @@ const ProjectModal = ({ project, show, onHide }: ProjectModalProps) => {
       <div className="flex flex-col lg:flex-row gap-6">
         {hasMedia && (
           <div className="lg:w-5/12 flex flex-col items-center">
-            <div className="w-full rounded-lg overflow-hidden aspect-[4/3] bg-surface-alt">
+            <div className="w-full rounded-lg overflow-hidden aspect-4/3 bg-surface-alt">
               {currentMedia ? (
                 isVideo(currentMedia) ? (
                   <video
@@ -56,6 +56,10 @@ const ProjectModal = ({ project, show, onHide }: ProjectModalProps) => {
                     controls
                     className="w-full h-full object-contain block"
                     style={{ backgroundColor: "#21262d" }}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                   />
                 ) : (
                   <img

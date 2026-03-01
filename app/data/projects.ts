@@ -9,16 +9,6 @@ import swaya1 from "~/assets/images/swaya/swaya1.jpg";
 import swaya2 from "~/assets/images/swaya/swaya2.jpg";
 import swaya3 from "~/assets/images/swaya/swaya3.jpg";
 
-import texmoBanner from "~/assets/images/texmo/TexmoBanner.jpg";
-import texmo1 from "~/assets/images/texmo/unknown.png";
-import texmo2 from "~/assets/images/texmo/unknown(1).png";
-import texmo3 from "~/assets/images/texmo/unknown(2).png";
-
-import technologBanner from "~/assets/images/technolog/TechnologBanner.jpg";
-import technolog1 from "~/assets/images/technolog/technolog1.jpg";
-import technolog2 from "~/assets/images/technolog/technolog2.jpg";
-import technolog3 from "~/assets/images/technolog/technolog3.jpg";
-
 import automatedFPLBanner from "~/assets/images/automatedFPL/fplBanner.jpg";
 import automatedFPL1 from "~/assets/images/automatedFPL/image.png";
 import automatedFPL2 from "~/assets/images/automatedFPL/image(1).png";
@@ -32,6 +22,13 @@ import woot5 from "~/assets/images/woot/Quiz Session Code.png";
 import woot6 from "~/assets/images/woot/Welcome to WOOT, Main Academic! ©.png";
 import woot9 from "~/assets/images/woot/Pasted Graphic 14.png";
 
+import candidoBanner from "~/assets/images/candido/CandidoBanner.png";
+import candido1 from "~/assets/images/candido/BoardScreenshot.png";
+import candido2 from "~/assets/images/candido/EditJobScreenshot.png";
+import candido3 from "~/assets/images/candido/SheetScreenshot.png";
+import candido4 from "~/assets/images/candido/Landing.png";
+import candido5 from "~/assets/images/candido/ComingSoon.png";
+
 export interface ProjectData {
   title: string;
   description: string;
@@ -44,20 +41,21 @@ export interface ProjectData {
 }
 
 export const featuredProjects: ProjectData[] = [
-  // {
-  //   title: "Automated Fantasy Premier League",
-  //   description: "Built an machine learning system to predict Fantasy Premier League player performance and automate squad optimisation. The project combined time-series modelling, feature engineering and optimisation techniques to support data-driven decision making under uncertainty.",
-  //   highlights: [
-  //     "Designed and evaluated predictive models using historical football data, benchmarked against baseline and official FPL metrics",
-  //     "Developed multi-stream LSTM models using player, team and match time-series data",
-  //     "Integrated the FPL API and scraped FBref to leverage on extensive and detailed datasets",
-  //     "Explored optimisation approaches including genetic algorithms and season-long simulation strategies inspired by top FPL managerial trends",
-  //     "Currently developing a web interface to allow users to interact with the model and optimise their squads on demand"
-  //   ],
-  //   images: [automatedFPL1, automatedFPL2, automatedFPL4],
-  //   tags: ["Python", "TensorFlow", "LSTM", "Sports Analytics", "Optimisation"],
-  //   github: "https://github.com/ianvexler/AutomatedFPLPlayer"
-  // }
+  {
+    title: "Candido",
+    description: "A full-stack job application tracker that helps users manage their job search. Add roles, move them through stages as you progress, and keep everything organized in one place. Built with Next.js, Express and PostgreSQL, deployed in AWS. Go give it a try at https://candidohq.com!",
+    highlights: [
+      "Kanban-style board with drag-and-drop to move jobs through stages",
+      "Bulk import from Excel (.xlsx, .xls) and CSV with flexible column mapping and status aliases",
+      "Rich job descriptions with TipTap editor and CV/cover letter uploads stored in S3",
+      "Deployed in AWS using ECS and RDS, built with Docker Compose"
+    ],
+    cardImage: candidoBanner,
+    images: [candido4, candido1, candido2, candido3, candido5],
+    tags: ["Next.js", "Express", "PostgreSQL", "Prisma", "Docker", "TypeScript", "Tailwind", "TipTap", "dnd-kit"],
+    github: "https://github.com/ianvexler/Candido",
+    link: "https://candidohq.com"
+  }
 ];
 
 export const otherProjects: ProjectData[] = [

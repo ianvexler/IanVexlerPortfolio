@@ -17,6 +17,9 @@ const Projects = () => {
           <h2 className="text-2xl font-serif text-text">Projects</h2>
         </div>
 
+        <div className="mb-4">
+          Featured:
+        </div>
         {featuredProjects.length > 0 && (
           <div className="mb-10 space-y-6">
             {featuredProjects.map((project, idx) => (
@@ -24,6 +27,13 @@ const Projects = () => {
                 key={idx}
                 onClick={() => setSelectedProject(project)}
                 className="cursor-pointer"
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    setSelectedProject(project);
+                  }
+                }}
               >
                 <FeaturedProjectCard {...project} />
               </div>
@@ -38,6 +48,13 @@ const Projects = () => {
                 key={idx}
                 onClick={() => setSelectedProject(project)}
                 className="cursor-pointer"
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    setSelectedProject(project);
+                  }
+                }}
               >
                 <ProjectCard
                   title={project.title}

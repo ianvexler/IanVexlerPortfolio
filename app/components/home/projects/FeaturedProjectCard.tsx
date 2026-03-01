@@ -1,11 +1,10 @@
-import classNames from "classnames";
-
 interface FeaturedProjectCardProps {
   title: string;
   description: string;
   highlights?: string[];
   images: string[];
   tags?: string[];
+  cardImage?: string;
   link?: string;
   github?: string;
 }
@@ -16,46 +15,29 @@ const FeaturedProjectCard = ({
   highlights = [],
   images,
   tags = [],
+  cardImage,
   link,
   github,
 }: FeaturedProjectCardProps) => {
-  return (
-    <div className="rounded-xl overflow-hidden bg-surface-alt border border-border transition-all duration-200 hover:border-accent/30 hover:shadow-lg hover:shadow-black/20">
-      <div className="flex flex-col lg:flex-row">
-        <div className="lg:w-5/12">
-          <div className="flex items-center p-4 md:p-5 h-full bg-surface">
-            <div className="grid grid-cols-2 grid-rows-2 gap-2 w-full aspect-[4/3]">
-              {images.length > 0 ? (
-                images.slice(0, 3).map((img, idx) => (
-                  <div
-                    key={idx}
-                    className={classNames("rounded-lg overflow-hidden", idx === 0 && "col-span-1 row-span-2")}
-                  >
-                    {img ? (
-                      <img
-                        src={img}
-                        alt={`${title} screenshot ${idx + 1}`}
-                        className="w-full h-full object-cover block"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-surface-alt">
-                        <i className="bi bi-image text-text-muted text-2xl" />
-                      </div>
-                    )}
-                  </div>
-                ))
-              ) : (
-                <div className="col-span-2 row-span-2 rounded-lg overflow-hidden">
-                  <div className="w-full h-full flex items-center justify-center bg-surface-alt">
-                    <i className="bi bi-image text-text-muted text-2xl" />
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
+  const bannerSrc = cardImage ?? images[0];
 
-        <div className="lg:w-7/12 p-5 md:p-6">
+  return (
+    <div className="max-w-6xl mx-auto rounded-xl overflow-hidden bg-surface-alt border border-border transition-all duration-200 hover:border-accent/30 hover:shadow-lg hover:shadow-black/20 group">
+      <div className="h-28 sm:h-32 overflow-hidden bg-surface">
+        {bannerSrc ? (
+          <img
+            src={bannerSrc}
+            alt=""
+            className="w-full h-full object-cover block transition-transform duration-300 group-hover:scale-[1.03]"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-surface">
+            <i className="bi bi-image text-text-muted text-2xl" />
+          </div>
+        )}
+      </div>
+
+      <div className="p-5 md:p-6">
           <h3 className="text-lg font-semibold text-text mb-3">{title}</h3>
 
           <p className="text-text-muted text-sm mb-6 leading-relaxed">
@@ -111,7 +93,6 @@ const FeaturedProjectCard = ({
               </a>
             )}
           </div>
-        </div>
       </div>
     </div>
   );
